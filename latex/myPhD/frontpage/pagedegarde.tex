@@ -1,0 +1,108 @@
+\newgeometry{top=3cm, bottom=1.5cm, left=2cm, right=2cm}
+
+%\RequirePackage{geometry}% That nicely create a one-page template
+%\geometry{top=3cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
+\thispagestyle{empty}
+
+%% Positionner le cadre dans la page.
+	%% Modifier yshift modifie la position des bords haut et bas du cadre. Modifier xshift modifie la position des bords gauche et droit du cadre. Il faut toujours les modifier deux par deux (ceux qui ont la même valeur ensemble).
+\begin{tikzpicture}[remember picture,overlay,color=blueTitles]
+	\draw[very thick]
+		([yshift=-3cm,xshift=1.5cm]current page.north west)--     
+		([yshift=-3cm,xshift=-1.5cm]current page.north east)--    
+		([yshift=1.5cm,xshift=-1.5cm]current page.south east)--      
+		([yshift=1.5cm,xshift=1.5cm]current page.south west)--cycle;
+%		([yshift=-160pt,xshift=45pt]current page.north west)--     
+%		([yshift=-160pt,xshift=-25pt]current page.north east)--    
+%		([yshift=35pt,xshift=-25pt]current page.south east)--      
+%		([yshift=35pt,xshift=45pt]current page.south west)--cycle; 
+\end{tikzpicture}
+
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+%% Position du NNT
+\begin{textblock}{5}(1.7,3.25)
+  NNT : 2000SACLV000
+\end{textblock}
+
+
+%% Logos en haut de la page
+\begin{textblock}{18}(1.5,1)
+\includegraphics[height=1cm]{frontpage/logo/UPsac.png}
+\hspace{0.9cm}
+\includegraphics[height=1cm]{frontpage/logo/EDSP.png}
+\hspace{0.9cm}
+\includegraphics[height=1cm]{frontpage/logo/uvsq.jpg}
+\hspace{0.9cm}
+\includegraphics[height=1cm]{frontpage/logo/inserm.jpg}
+\hspace{0.9cm}
+\includegraphics[height=1cm]{frontpage/logo/pasteur.png}
+\end{textblock}
+
+
+\bigskip
+\bigskip
+%% Texte
+\color{blueTitles}
+  \begin{center}    
+    \LARGE{Thèse de doctorat\\ de l'Université Truc Regroupé} \\
+    \vspace{0.5cm}
+    
+	\color{black}
+    \large{préparée à \\
+    l'Université de Truc Seul (si nécessaire)} \\
+	\vspace{0.5cm}
+	
+    \large{École doctorale XXX de Thème \\
+	Spécialité XXX} \\
+    \vspace{1cm}  
+    
+   	\normalsize{Présentée par} \\
+   	\LARGE{Prénom Nom} \\
+    \vspace{1.5cm}
+    
+	\color{blueTitles}
+    \Huge{Un super titre de thèse très intéressant/incompréhensible} \\
+    \LARGE{Sous-titre} \\
+    \vspace{2cm}
+
+	\color{black}
+	\begin{normalsize}
+	Thèse dirigée par Prénom Nom et Prénom Nom \\
+	\vspace{0.25cm}
+	
+	préparée au sein de l'unité XXX \\
+	Affiliations \\
+    \vspace{1cm}
+    
+	Soutenue publiquement à Lieu le Date \\
+	\vspace{0.25cm}
+	
+	devant le jury composé de :\\
+	\vspace{0.5cm}
+	
+	%% Members of the jury
+	\begin{tabular}{lllll}
+    
+    M. & Prénom Nom & Grade & Université & Président \\
+   
+    M. & Prénom Nom & Grade & Université & Rapporteur \\
+
+    Mme. & Prénom Nom & Grade & Université & Rapportrice \\
+    
+    Mme. & Prénom Nom & Grade & Université & Examinatrice \\
+    
+    M. & Prénom Nom & Grade & Université & Directeur de thèse \\
+    
+    Mme. & Prénom Nom & Grade & Université & Directrice de thèse \\
+   
+  \end{tabular}   
+  \end{normalsize} 
+\end{center}
+
+\restoregeometry
+
+\clearpage
+\thispagestyle{empty}
+\color{black}

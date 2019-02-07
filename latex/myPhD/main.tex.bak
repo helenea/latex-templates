@@ -1,0 +1,126 @@
+\pdfobjcompresslevel 0
+\documentclass{myClass}
+
+\begin{document}
+
+
+%%%%% PAGE DE GARDE %%%%%
+
+\include{frontpage/pagedegarde}
+
+\cleardoublepage
+\thispagestyle{empty}
+
+\vspace*{\stretch{1}}
+\begin{center}
+	\begin{minipage}{10cm}
+		\begin{center}
+		Version du \today
+		\end{center}
+	\end{minipage}
+\end{center}
+\vspace*{\stretch{1}}
+\clearpage
+\thispagestyle{empty}
+
+
+
+%%%%% FRONT MATTER %%%%%
+
+\frontmatter
+\pagestyle{contentFrontBackmatter}
+
+\addcontentsline{toc}{part}{Avant-propos}
+\input{frontmatter/remerciements}
+\input{frontmatter/publications}
+\blankpage
+
+\tableofcontents
+\clearpage
+\thispagestyle{empty}
+
+\renewcommand\listfigurename{Liste des figures}
+\listoffigures
+\clearpage
+\thispagestyle{empty}
+\listoftables
+\clearpage
+\thispagestyle{empty}
+\input{frontmatter/abbreviations}
+
+
+
+%%%%% MAIN MATTER %%%%%
+
+\mainmatter
+
+%%% PRECISIONS :
+%%% 1- RAJOUTER LES DEUX LIGNES SUIVANTES A LA FIN DE CHAQUE CHAPITRE %%%
+%\clearpage
+%\thispagestyle{empty}
+%%% 2- DANS LES CHAPITRES DES \part*{} %%%
+%%% RAJOUTER \thispagestyle{plainStarred} APRES LA COMMANDE \chapter{} %%%
+%%% 3- DANS LES CHAPITRES DES \part{} %%%
+%%% RAJOUTER \thispagestyle{plainNormal} APRES LA COMMANDE \chapter{} %%%
+
+
+%%% INTRODUCTION %%%
+% Partie non numérotée (\part*)
+\pagestyle{contentStarred}
+
+\part*{Introduction}
+\input{chapters/intro/chap1}
+\blankpage
+
+
+%%% PARTIES NUMEROTEES %%%
+\pagestyle{contentNormal}
+
+%%% PARTIE 1 %%%
+\part[Titre affiché dans la table des matières]{Titre de la partie 1}
+\input{chapters/part1/chap1}
+\input{chapters/part1/chap2}
+\blankpage
+
+%%% PARTIE 2 %%%
+\part{Titre de la partie 2}
+\input{chapters/part2/chap1}
+\blankpage
+
+
+%%% CONCLUSION %%%
+% Partie non numérotée
+\pagestyle{contentStarred}
+
+\part*{Conclusion}
+\input{chapters/conclu/chap1}
+\blankpage
+
+%\clearpage
+%\thispagestyle{empty}
+
+
+
+%%%%% APPENDIX %%%%%
+
+\appendix
+\pagestyle{contentAppendix}
+
+%%% ANNEXES %%%
+% Parties non numérotées
+\part*{Annexes}
+\input{appendices/part1/chap1}
+
+
+
+%%%%% BACK MATTER %%%%%
+
+\backmatter
+\pagestyle{contentFrontBackmatter}
+
+%%% BIBLIOGRAPHIE %%%
+\bibliography{biblio/intro,biblio/part1,biblio/conclu}
+\bibliographystyle{myBibStyle}
+
+
+\end{document}

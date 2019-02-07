@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt]{lettre}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+
+\makeatletter
+\newcommand*{\NoRule}{\renewcommand*{\rule@length}{0}}
+\makeatother
+
+%\tension{0}
+
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{Unit\'e de Pharmaco-\'epid\'emiologie et maladies infectieuses\\
+Institut Pasteur} % destinataire
+\NoRule
+\openingspace=3pt
+\sigspace=0pt
+
+\name{H\'el\`ene Arduin} % expéditeur (n'apparaît pas)
+\address{H\'el\`ene Arduin\\
+3 cours de la Lib\'eration\\
+38100 Grenoble}
+\telephone{06 86 55 24 37}
+\email{helene.arduin@phelma.grenoble-inp.fr}
+\nofax
+
+\lieu{Grenoble}
+
+%\def\concname{Objet :~} % On définit ici la commande 'objet'
+%\conc{Candidature pour un stage de fin d'\'etudes} % objet de la lettre
+
+\opening{Madame, Monsieur,}
+
+Texte
+
+\closing{Je reste \`a votre disposition si vous souhaitez me rencontrer. Veuillez agr\'eer, Madame, Monsieur, mes sinc\`eres salutations.}
+
+\signature{H\'el\`ene Arduin}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}

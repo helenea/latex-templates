@@ -1,0 +1,23 @@
+\chapter{Titre de niveau 0 (chapter)}
+\thispagestyle{plainStarred}
+
+
+\blindtext
+
+
+\section{Titre de niveau 1 (section)}
+\blindtext
+
+	\subsection{Titre de niveau 2 (subsection)}
+\blindtext
+
+	\subsection{Titre de niveau 2 (subsection)}
+\blindtext
+
+
+\section{Titre de niveau 1 (section)}
+\blindtext
+
+
+\clearpage
+\thispagestyle{empty}

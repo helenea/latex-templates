@@ -1,5 +1,5 @@
-*.aux
-*.log
-*.out
-*.gz
-*.bak
+**/*.aux
+**/*.log
+**/*.out
+**/*.gz
+**/*.bak

@@ -1,0 +1,45 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myPackages}
+
+%%% Language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{blindtext} % pour générer le lorem ipsum
+
+%%% Page layout
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\parindent}{0pt} % enlève les alinéas en début de paragraphe
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage[absolute]{textpos}
+\usepackage{etoolbox}
+\usepackage{cite}
+\usepackage{pdfpages}
+
+%%% Font style
+\renewcommand{\familydefault}{lmss}
+\usepackage{quoting}
+
+%%% Math
+\usepackage{mathtools}
+\usepackage{physics}
+\everymath{\displaystyle}
+\usepackage{gensymb}
+\usepackage{xfrac}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+%%% Tables
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\setcellgapes[t]{3pt}
+\renewcommand{\theadfont}{\footnotesize\bfseries}
+\renewcommand{\theadgape}{}
+
+%%% Referencing
+\usepackage[hidelinks,linktoc=all,backref=true]{hyperref}
+\usepackage[french,nameinlink]{cleveref}

@@ -1,47 +1,74 @@
 \documentclass[a4paper,10pt]{lettre}
-\usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
+
+\usepackage{myPackages}
 
 \makeatletter
 \newcommand*{\NoRule}{\renewcommand*{\rule@length}{0}}
 \makeatother
 
-%\tension{0}
 
 \begin{document}
 % If you want headings on subsequent pages,
 % remove the ``%'' on the next line:
 % \pagestyle{headings}
 
-\begin{letter}{Unit\'e de Pharmaco-\'epid\'emiologie et maladies infectieuses\\
-Institut Pasteur} % destinataire
+\begin{letter}{Destinataire} % destinataire
 \NoRule
-\openingspace=3pt
+
+\openingspace=0pt
 \sigspace=0pt
 
-\name{H\'el\`ene Arduin} % expéditeur (n'apparaît pas)
-\address{H\'el\`ene Arduin\\
-3 cours de la Lib\'eration\\
-38100 Grenoble}
+%Margin for the letter content
+\marge{0mm}
+
+\makeatletter
+		% BOITE D'ENTETE
+		\def\pict@let@width{185}       % default: 185
+		\def\pict@let@height{65}       % default: 65
+		\def\pict@let@hoffset{0}       % default: 0
+		\def\pict@let@voffset{0}       % default: 0
+		% TRAIT DE PLIAGE
+%		\def\rule@hpos{-25}            % default: -25
+%		\def\rule@vpos{-15}            % default: -15
+		\def\rule@length{0}           % default: 10
+		% ADRESSE DE L'EXPEDITEUR
+		\def\fromaddress@let@hpos{0} % default: -10
+		\def\fromaddress@let@vpos{70}  % default: 70
+		                               % je remonte légèrement l'adresse vers le coin haut gauche
+		\fromaddress@let@width=50mm    % default: 69
+		% LIEU D'EXPEDITION
+		\def\fromlieu@let@hpos{117}     % default: 90
+		\def\fromlieu@let@vpos{15}      % default: 62 
+		                               % je déplace lieu et date sous l'adresse du destinataire
+		\fromlieu@let@width=50mm       % default: 69
+		% ADRESSE DU DESTINATAIRE
+		\def\toaddress@let@hpos{95}    % default: 90
+		\def\toaddress@let@vpos{45}    % default: 40
+		\toaddress@let@width=65mm      % default: 80
+\makeatother
+
+\name{Hélène Arduin} % expéditeur
+\address{Hélène Arduin\\
+55 rue des Arcs Saint Cyprien\\
+31300 Toulouse}
 \telephone{06 86 55 24 37}
-\email{helene.arduin@phelma.grenoble-inp.fr}
+\email{helene.arduin@inserm.fr}
 \nofax
 
-\lieu{Grenoble}
+\renewcommand{\tellabelname}{}
+\renewcommand{\emaillabelname}{}
 
-%\def\concname{Objet :~} % On définit ici la commande 'objet'
-%\conc{Candidature pour un stage de fin d'\'etudes} % objet de la lettre
+\lieu{Toulouse}
+
+\def\concname{Objet :~} % On définit ici la commande 'objet'
+\conc{Candidature pour XXX} % objet de la lettre
 
 \opening{Madame, Monsieur,}
 
 Texte
 
-\closing{Je reste \`a votre disposition si vous souhaitez me rencontrer. Veuillez agr\'eer, Madame, Monsieur, mes sinc\`eres salutations.}
-
-\signature{H\'el\`ene Arduin}
-
-%enclosure listing
-%\encl{}
+\closing{Veuillez agréer, Madame, Monsieur, mes sincères salutations.}
 
 \end{letter}
+
 \end{document}

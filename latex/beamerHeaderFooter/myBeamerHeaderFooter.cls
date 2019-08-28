@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{myBeamer}
+\ProvidesClass{myBeamerHeaderFooter}
 \LoadClass{beamer}
 
 %%% Language

@@ -1,0 +1,185 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[french]{babel}
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{3.6cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+\usepackage{makecell}
+
+% personal data
+\name{Prénom}{Nom}
+\title{Chercheuse post-doctorante}% optional, remove / comment the line if not wanted
+\address{Adresse}{Ville}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone{01 23 45 67 89}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{my.email@mail.fr}                               % optional, remove / comment the line if not wanted
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+\extrainfo{30 ans}                 % optional, remove / comment the line if not wanted
+%\photo[80pt][0pt]{picture.JPG}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\vspace{-0.8cm}
+
+
+\section{Expérience}
+\cventry{déc 2019 - en cours}%
+{Post-doctorat}%
+{Labo}%
+{Affiliation}%
+{}%
+{"Nom du projet"\newline{}%
+Compétences mobilisées au cours du projet}  % arguments 3 to 6 can be left empty
+
+\smallskip
+\cventry{juin 2019}%
+{Organisation d'une école de recherche thématique}%
+{}%
+{Affiliation}%
+{}%
+{École de recherche sur XXX\newline{}%
+Compétences mobilisées}  % arguments 3 to 6 can be left empty
+
+\smallskip
+\cventry{2014 - 2018}%
+{Doctorat en XXX}%
+{}%
+{Université}%
+{}%
+{"Titre de la thèse" \url{http://theses.fr/XXX}\newline{}%
+Compétences mobilisées/acquises\newline{}%
+\textit{Labo/Affiliation}
+}  % arguments 3 to 6 can be left empty
+
+% Mettre l'enseignement et l'encadrement sous forme d'items dans le doctorat, enlever les dates mettre putôt le volume horaire d'enseignement ?
+
+\smallskip
+\cventry{2015 - 2017}%
+{Mission doctorale d'enseignement}%
+{UFR}%
+{Université}%
+{}%
+{- Nom du cours et niveau\newline{}%
+- Nom d'un autre cours et niveau}
+
+\smallskip
+\cventry{Juin - septembre 2015}%
+{Encadrement de stage}%
+{Étudiant.e}%
+{Labo}%
+{}%
+{\textit{Sujet :} XXX}
+
+
+\smallskip
+\section{Compétences}
+%\subsection{Informatique}
+\cvitem{Informatique}{\textbf{Langages :} R, NetLogo, bash, notions de : Scala, Python, C++}
+
+\smallskip
+%\subsection{Outils et méthodes d'analyse}
+\cvitem{Outils et méthodes}{\textbf{Modélisation :} agent (NetLogo, GAMA, Scala), compartimentale (R, C, Scala)}
+
+\cvitem{}{\textbf{Calcul distribué :} European Grid Infrastructure, cluster SLURM}
+
+\cvitem{}{\textbf{Exploration de modèles :} analyses de sensibilité, optimisation, profils de calibration (OpenMOLE)}
+
+\cvitem{}{\textbf{Statistiques :} modèles de régressions (R), estimation de paramètres (R, OpenMOLE)}
+
+\smallskip
+%\subsection{Langues}
+\cvitem{Langues}{\textbf{Anglais :} Courant écrit et parlé (niveau C1), utilisation quotidienne}
+
+
+\smallskip
+\section{Formation}
+\cventry{2011 - 2014}{Type de diplôme}{filière XXX}{École/Université XXX}{Ville}{}
+
+\smallskip
+\cventry{2008 - 2011}{Type d'études}{options}{Lycée XXX}{Ville}{}
+
+
+\clearpage
+\section{Publications}
+\cventry{Articles publiés}%
+{Titre}%
+{}{Nom P, \textit{MonNom MonP}, and Nom P}{Journal, 2019, doi : 10.1073/pnas.1839482116}%
+{}
+
+\smallskip
+\cventry{En préparation}%
+{Titre}%
+{}{\textit{MonNom MonP}, Nom P, and Nom P}{}%
+{}
+
+
+\smallskip
+\section{Conférences}
+\cventry{Nom de la conférence Année \textit{poster}}%
+{Titre présentation}{}%
+{Liste auteurices}%
+{Ville, Pays}{}
+
+\smallskip
+\cventry{Nom de la conférence Année \textit{présentation orale}}%
+{Titre présentation}{}%
+{Liste auteurices}%
+{Ville, Pays}{}
+
+
+\smallskip
+\section{Informations complémentaires}
+\cvitem{2015 - 2017}{Représentante des doctorants et post-doctorants au conseil de laboratoire}
+
+\cvitem{2017}{Organisation de la retraite scientifique du laboratoire}
+
+\cvitem{Centres d'intérêt}{Parce qu'on a plein de temps pour nos passions dans la recherche}
+
+
+\end{document}
+
+
+%% end of file `template.tex'.
